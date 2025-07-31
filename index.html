@@ -1,0 +1,67 @@
+<html >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advanced Stopwatch & Clock</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🕒 Stopwatch, Clock & Timer</h1>
+
+    <div class="toggle-row">
+      <label>
+        <input type="checkbox" id="toggleFormat" /> 24-Hour Format
+      </label>
+      <label>
+        <input type="checkbox" id="toggleTheme" /> Dark Mode
+      </label>
+    </div>
+
+    <div class="clock-section">
+      <h2>Current Time (<span id="timezone"></span>)</h2>
+      <div class="clock">
+        <div id="digitalClock">00:00:00</div>
+        <canvas id="analogClock" width="150" height="150"></canvas>
+        <div id="date">01 Jan 1970</div>
+      </div>
+    </div>
+
+    <div class="stopwatch-section">
+      <h2>Stopwatch</h2>
+      <div id="stopwatch">00:00:00</div>
+      <div class="buttons">
+        <button id="startBtn">Start</button>
+        <button id="pauseBtn">Pause</button>
+        <button id="resetBtn">Reset</button>
+        <button id="lapBtn">Lap</button>
+        <button id="exportBtn">Export Laps</button>
+      </div>
+      <div class="laps">
+        <h3>Laps</h3>
+        <ul id="lapsList"></ul>
+        <p id="lapStats"></p>
+      </div>
+    </div>
+
+    <div class="countdown-section">
+      <h2>Countdown Timer</h2>
+      <input type="number" id="countdownInput" placeholder="Seconds" min="1" />
+      <button id="startCountdown">Start Timer</button>
+      <div id="countdownDisplay">00:00</div>
+    </div>
+
+    <div class="theme-selector">
+      <label for="themeColor">Choose Theme:</label>
+      <select id="themeColor">
+        <option value="default">Default</option>
+        <option value="blue">Blue</option>
+        <option value="green">Green</option>
+        <option value="purple">Purple</option>
+      </select>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
